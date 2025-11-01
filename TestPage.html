@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+        <title>KaTeX funcionando</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        ></script>
+
+        <!-- Activar renderizado -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "\\(", right: "\\)", display: false },
+                    ],
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navBar">
+            <a href="index.html" class="t">Diego Mc</a>
+            <a href="About.html" class="t">About</a>
+        </div>
+        <div id="line"></div>
+        <div id="main">
+            <h1>Acaruro</h1>
+            <h2>
+                workshop
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <h2>Robot</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p translate="no">Ecuación en línea: \(E = mc^2\)</p>
+            <p class="code">
+import sympy
+
+omega = sympy.Symbol("omega", positive=True, finite=True)
+l = sympy.Symbol("l", positive=True, finite=True)
+A = sympy.Matrix(
+    [
+        [0, 0, 1, 0],
+        [0, 0, 0, 1],
+        [0, 0, 0, 0],
+        [0, omega**2, 0, 0],
+    ]
+)
+B = sympy.Matrix([[0], [0], [1], [-1 / l]])
+T = sympy.Symbol("T")
+
+A_d = sympy.exp(A * T).simplify()
+B_d = (A_d.simplify() * B).integrate((T, 0, T))
+            </p>
+        </div>
+    </body>
+</html>
