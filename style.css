@@ -46,9 +46,18 @@ p {
     font-size: 0.9em;
 }
 img {
-    height: 300px; /* defines la altura */
-    width: auto; /* el ancho se ajusta automáticamente */
+    vertical-align: top;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: cover; /* opcional: recorta si no encaja exacto */
+}
+img.medium {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+img.high {
+    max-width: 100%;
 }
 a {
     color: #005df9;
@@ -97,4 +106,10 @@ a:hover {
 #fr {
     white-space: pre-line;
     text-align: right;
+}
+.imgDescription {
+    font-style: italic;
+    color: #6f737a;
+    margin-top: 0.2em;
+    font-size: small;
 }

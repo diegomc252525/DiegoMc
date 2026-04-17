@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Construyendo una Intel 4004</title>
+        <link rel="icon" href="..\Resources\icon.png" type="image/png">        <link rel="stylesheet" href="..\style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        ></script>
+
+        <!-- Activar renderizado -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                    ],
+                });
+            });
+        </script>
+    </head>
+    <body>
+     <div id="navBar">
+            <a href="..\index.html" class="t">Diego Mc</a>
+            <a href="..\About.html" class="t">About</a>
+        </div>
+        <div id="line"></div>
+        <div id="main"><h1>Construyendo una Intel 4004</h1>
+<p>Semanas anteriores a este me propuse construir un procesador, dije entonces, el mas fácil y básico de todos, el primer procesador!!, estos temas me llaman mucha la atención, aun que no soy ingeniero eléctrico, solo un simple programador de alto nivel, dicho todo esto puse manos a la obra, primero lo primero me descargue un programa de electrónica digital, se llama Logisim Evolution, nunca antes lo había usado, puede que haya errado en el uso de sus herramientas, bueno creo que use un martillo para atornillar algunas cosas en ese programa, prometo para la próxima tomar un curso exhaustivo del programa antes de usarlo.
+</p>
+<img src="..\Resources\Pasted image 20260413210959.png"/>
+<p class="imgDescription">Logisim Evolution</p>
+<h2>Construcción</h2>
+<p>Primero lo primero empecé a construir por la Alu, según mencionan documentación tenia un sumador una puerta And, un Or y un Xor todos de 4bits por el la 4004 es un procesador de 4 bits yo le agregue un restador por que tenia algunos problemas para usar el complemento
+</p>
+<img src="..\Resources\Pasted image 20260413211037.png"/>
+<p class="imgDescription">Alu</p>
+<p>Luego proseguí con el PC o program counter, que es de 12bits
+</p>
+<img src="..\Resources\Pasted image 20260413211108.png"/>
+<p class="imgDescription">Program Counter</p>
+<p>Seguidamente con los Registros generales, Stack y el Accumulator, y no implemente el registro temporal!!
+</p>
+<img src="..\Resources\Pasted image 20260413211126.png"/>
+<img src="..\Resources\Pasted image 20260413211135.png"/>
+<img src="..\Resources\Pasted image 20260413211141.png"/>
+<p class="imgDescription">Accumulator 4bits, Register 16–4bits, Stack 12bits</p>
+<p>Proseguí con el CU o la unidad de control que fue lo mas difícil de hacer, la 4004 tiene 44 Instrucciones yo solo implemente 10 Instrucciones algunos eran repetitivos y otros no los entendía muy bien
+</p>
+<img src="..\Resources\Pasted image 20260413211218.png"/>
+<img src="..\Resources\Pasted image 20260413211233.png"/>
+<img src="..\Resources\Pasted image 20260413211240.png"/>
+<img src="..\Resources\Pasted image 20260413211248.png"/>
+<img src="..\Resources\Pasted image 20260413211256.png"/>
+<img src="..\Resources\Pasted image 20260413211305.png"/>
+<img src="..\Resources\Pasted image 20260413211313.png"/>
+<img src="..\Resources\Pasted image 20260413211320.png"/>
+<img src="..\Resources\Pasted image 20260413211327.png"/>
+<img src="..\Resources\Pasted image 20260413211333.png"/>
+<p class="imgDescription">Instrucciones implementadas LD, XCH, LDM, NOP, JUN, ADD, SUB, BBL, JMS no esta ordenado</p>
+<img src="..\Resources\Pasted image 20260413211350.png"/>
+<img src="..\Resources\Pasted image 20260413211355.png"/>
+<p class="imgDescription">CU y el Main</p>
+<p>
+Terminar todo eso fue para mi una tarea titánica creo que subestime mucho el procesador pensé que iba a ser mas fácil, y creo que aun tiene algunos bugs, pero bueno saco de esto una comprensión un poco mas profunda de los procesadores.
+
+Un programa simple de Fibonacci, como solo tiene 4 bits, solo puede calcular hasta el 1,1,2,3,5,8,13, para calcular mas allá de eso, creo que ya no seria un programa trivial.
+Este es su código:
+</p>
+<img src="..\Resources\1_UAcX49oZqQBYd7Gl1l6Pqw.gif"/>
+<p class="imgDescription">e = ldm, b = xch, a = ld, 9 = add, 4 = jun, los otros son direcciones de registro o pc</p>
+<img src="..\Resources\1_MGZxu36Tntbk95-X9Gn4Aw.gif"/>
+<p>Y este es su funcionamiento en los registros
+</p>
+</div></body></html>

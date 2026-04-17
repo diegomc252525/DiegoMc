@@ -32,7 +32,7 @@
                 renderMathInElement(document.body, {
                     delimiters: [
                         { left: "$$", right: "$$", display: true },
-                        { left: "\\(", right: "\\)", display: false },
+                        { left: "$", right: "$", display: false },
                     ],
                 });
             });
@@ -75,7 +75,8 @@
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p translate="no">Ecuación en línea: \(E = mc^2\)</p>
-            <p class="code">
+            <p class="imgDescription"> descripcion de imagen</p>
+            <p class="code" translate="no">
 import sympy
 
 omega = sympy.Symbol("omega", positive=True, finite=True)
