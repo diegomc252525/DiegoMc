@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Termine un curso de Grease Pencil</title>
+        <link rel="icon" href="..\Resources\icon.png" type="image/png" />
+        <link rel="stylesheet" href="..\style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        ></script>
+
+        <!-- Activar renderizado -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                    ],
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navBar">
+            <a href="..\index.html" class="t">Diego Mc</a>
+            <a href="..\About.html" class="t">About</a>
+        </div>
+        <div id="line"></div>
+        <div id="main">
+            <h1>Termine un curso de Grease Pencil</h1>
+            <p>
+                Hice un curso de Grease Pencil de un ambiente medieval, mi
+                resultado final resulto en esto.
+            </p>
+            <iframe
+                id="ytplayer"
+                type="text/html"
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/nYGLTHbeSIE?autoplay=0&origin=https://diegomc252525.github.io"
+                frameborder="0"
+            ></iframe>
+            <p class="imgDescription">Ambiente medieval</p>
+            <p>
+                Aprendí mucho tomando este curso, pienso hacer mas proyecto en
+                Grease Pencil.
+            </p>
+        </div>
+    </body>
+</html>
